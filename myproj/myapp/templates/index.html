@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form action="" method="POST">
+    {%csrf_token%}
+    <input type="text" name ="field1" placeholder="name">
+    <input type="text" name ="field2" placeholder="cost">
+    <input type="text" name ="field3" placeholder="count">
+    <input type="text" name ="field4" placeholder="description">
+    <input type="text" name ="field5" placeholder="cat">
+    <input type="submit" value = "OK">
+  </form>
+  {% for i in test %}
+    {{i.name}}
+    {{i.cost}}
+    {{i.count}}
+    <input type="text" name ="field1" placeholder="{{i.name}}">
+  {%endfor%}
+</body>
+</html>
